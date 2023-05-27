@@ -2,7 +2,7 @@
   "website": "https://www.nytimes.com/",
   "output_folder": "output",
   "output_file_name": "output_file.xlsx",
-  "search": "brazil",
+  "search": "Ja Morant",
   "search_date_range": 5,
-  "sections": ["World"]
+  "sections": ["World", "Sports"]
 }
