@@ -1,6 +1,6 @@
 {
   "website": "https://www.nytimes.com/",
-  "output_folder": "output",
+  "output_folder": "job",
   "output_file_name": "output_file.xlsx",
   "search": "gym",
   "search_date_range": 5,
