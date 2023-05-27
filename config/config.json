@@ -1,6 +1,6 @@
 {
   "website": "https://www.nytimes.com/",
-  "output_folder": "job",
+  "output_folder": "output",
   "output_file_name": "output_file.xlsx",
   "search": "brazil",
   "search_date_range": 5,
