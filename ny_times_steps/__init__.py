@@ -170,7 +170,7 @@ class nytimes_news_management:
             })
             df = pd.concat([df, data], ignore_index=True)
 
-            news_count_controller +=1
+            #news_count_controller +=1
 
         return df
 
