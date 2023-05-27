@@ -22,7 +22,7 @@ class nytimes_news_management:
         print(f'Searching for news at {self.website}')
         browser.open_available_browser(url=configs['website'], maximized=True)
         browser.click_element_if_visible(locator='//button[@data-testid="GDPR-accept"]')
-        browser.click_element_when_clickable(locator='//button[@data-test-id="search-button"]')
+        browser.click_element_when_visible(locator='//button[@data-test-id="search-button"]')
         browser.input_text(text=self.search_text, locator='//input[@data-testid="search-input" and @type="text"]')
         browser.click_element(locator='//button[@data-test-id="search-submit" and @type = "submit"]')
 
