@@ -2,7 +2,7 @@
   "website": "https://www.nytimes.com/",
   "output_folder": "output",
   "output_file_name": "output_file.xlsx",
-  "search": "John Mayer",
-  "search_date_range": 5,
-  "sections": ["World", "Opinion", "Style"]
+  "search": "Silicon Valley",
+  "search_date_range": 0,
+  "sections": ["World", "Opinion"]
 }
