@@ -25,7 +25,6 @@ class nytimes_news_management:
         browser.click_element_when_visible(locator='//button[@data-test-id="search-button"]')
         browser.input_text(text=self.search_text, locator='//input[@data-testid="search-input" and @type="text"]')
         browser.click_element(locator='//button[@data-test-id="search-submit" and @type = "submit"]')
-
         return
 
     #                                Apply date Filters
