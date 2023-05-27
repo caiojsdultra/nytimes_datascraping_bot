@@ -157,7 +157,7 @@ class nytimes_news_management:
             #                            FOUND MONEY CITATIONS
             found_dollar = utils.find_dollar(text_title=text_title)
 
-            #                            STORE INFO INTO DATAFRAME
+            #                            STORE INTO DATAFRAME
             #
             list_information.append([text_title, news_date, desc_text, count_search_occurrences, found_dollar, file_name])
             data = pd.DataFrame({
