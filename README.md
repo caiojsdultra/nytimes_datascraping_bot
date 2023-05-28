@@ -1,6 +1,6 @@
 The main steps:
 
-1. Open the site by following the link
+1. Open the website by following the link
 2. Enter a phrase in the search field
 3. On the result page, apply the following filters:
     - select a news category or section

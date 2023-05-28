@@ -3,7 +3,7 @@
   "output_folder": "output",
   "output_file_name": "output_file.xlsx",
   "SEARCH":"billion",
-  "DATE_RANGE": 0,
+  "DATE_RANGE": 1,
   "SECTIONS": [""]
 
 }
