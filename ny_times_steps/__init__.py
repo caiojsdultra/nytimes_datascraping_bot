@@ -161,7 +161,7 @@ class nytimes_news_management:
             found_dollar = utils.find_dollar(text_title=text_title, text_description=desc_text)
 
             #                            STORE INTO DATAFRAME
-            #
+
             list_information.append([text_title, news_date, desc_text, count_search_occurrences, found_dollar, file_name])
             data = pd.DataFrame({
                 'TITLE': [list_information[0][0]],
@@ -172,7 +172,6 @@ class nytimes_news_management:
                 'NEWS PICTURE': [list_information[0][5]]
             })
             df = pd.concat([df, data], ignore_index=True)
-
             news_count_controller +=1
         return df
 
