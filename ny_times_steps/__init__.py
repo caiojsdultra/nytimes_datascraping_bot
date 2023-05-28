@@ -158,7 +158,7 @@ class nytimes_news_management:
             count_search_occurrences = utils.count_search_occurrences(text=self.search_text, title_text=text_title, desc_text=desc_text)
 
             #                            FOUND MONEY CITATIONS
-            found_dollar = utils.find_dollar(text_title=text_title)
+            found_dollar = utils.find_dollar(text_title=text_title, text_description=desc_text)
 
             #                            STORE INTO DATAFRAME
             #
