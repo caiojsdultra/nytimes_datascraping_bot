@@ -14,3 +14,4 @@ temp/
 testrun/*
 .~lock*
 *.pkl
+#output folder removed from gitignore
