@@ -1,7 +1,6 @@
 import ny_utils.utils
 from ny_times_steps import nytimes_news_management
 from ny_utils import utils
-
 from RPA.Robocorp.WorkItems import WorkItems
 
 wi = WorkItems()
@@ -49,7 +48,7 @@ try:
         steps.click_more_button()
         new_df = steps.get_news_information()
         #                               Write Excel File
-        #utils.write_excel_file(new_df, output_fullpath)
+        utils.write_excel_file(new_df, output_fullpath)
         print('Using this DF to create excel file:', new_df)
         steps.finish_process()
 except Exception as e:
