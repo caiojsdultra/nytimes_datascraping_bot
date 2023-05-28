@@ -6,7 +6,6 @@ def get_config_info(config_file):
 
 def filter_month(month: int):
     from datetime import datetime, timedelta
-    from dateutil.relativedelta import relativedelta
 
     current_date = datetime.today().strftime('%m/%d/%Y')
 

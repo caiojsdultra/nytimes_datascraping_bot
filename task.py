@@ -17,6 +17,7 @@ steps = nytimes_news_management(configs['website'], search_new, date_range, sect
 output_fullpath = ''.join([configs['output_folder'],'/',configs['output_file_name']])
 
 print('DATAFRAME:', return_dataframe)
+print(f'PARAMS: {search_new}, {date_range}, {sections}')
 
 #                                Search News
 steps.search_news()
