@@ -1,5 +1,9 @@
 {
   "website": "https://www.nytimes.com/",
   "output_folder": "output",
-  "output_file_name": "output_file.xlsx"
+  "output_file_name": "output_file.xlsx",
+  "SEARCH_TEXT":"",
+  "DATE_RANGE": 0,
+  "SECTIONS": [""]
+
 }
