@@ -51,6 +51,7 @@ try:
         #                               Write Excel File
         utils.write_excel_file(new_df, output_fullpath)
         print('Using this DF to create excel file:', new_df)
+        steps.finish_process()
 except Exception as e:
 
     if len(new_df) > 0:

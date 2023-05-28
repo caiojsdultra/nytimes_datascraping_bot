@@ -7,7 +7,7 @@ import RPA.HTTP
 
 
 http = RPA.HTTP.HTTP()
-browser = Selenium(auto_close=False)
+browser = Selenium(auto_close=False, timeout=30,page_load_timeout=30)
 configs = utils.get_config_info('config/config.json')
 
 class nytimes_news_management:
