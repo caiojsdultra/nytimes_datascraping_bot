@@ -64,9 +64,7 @@ def create_robot_output_folder():
 def count_search_occurrences(text, title_text, desc_text):
 
     joined_texts = ' '.join([title_text.lower(), desc_text.lower()])
-
-    total_search_occurrences = joined_texts.count(text)
-
+    total_search_occurrences = joined_texts.count(text.lower())
     return total_search_occurrences
 
 

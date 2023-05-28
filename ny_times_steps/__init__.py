@@ -47,6 +47,10 @@ class nytimes_news_management:
         return
     #                                Apply Section Filters
     def apply_section_filters(self):
+
+        if self.sections[0] == "":
+            return 'No section were selected.'
+
         browser.click_element_if_visible(locator='xpath=//button[@data-testid="search-multiselect-button"]')
 
         # Business Rule- your automation should have the option to choose from none to any number of categories/sections
@@ -146,7 +150,7 @@ class nytimes_news_management:
 
             try:
                 image_source = browser.get_element_attribute(locator=f'css=#site-content > div.css-1wa7u5r > div:nth-child(2) > div.css-46b038 > ol > li:nth-child({counter}) > div > div > figure > div > img',attribute='src')
-                http.download(url=image_source, target_file=file_path)
+                #http.download(url=image_source, target_file=file_path)
             except:
                 image_source = '<unknown>'
             #                            COUNT SEARCH PHRASE OCCURRENCES
@@ -170,7 +174,6 @@ class nytimes_news_management:
             df = pd.concat([df, data], ignore_index=True)
 
             news_count_controller +=1
-
         return df
 
 

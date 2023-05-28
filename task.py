@@ -4,18 +4,18 @@ from ny_utils import utils
 from RPA.Robocorp.WorkItems import WorkItems
 
 # Comment these variables bellow if running the project locally.
-wi = WorkItems()
-wi.get_input_work_item()
-
-search_new = wi.get_work_item_variable("SEARCH") #Load the input variable SEARCH_TEXT from this config if running locally.
-date_range = wi.get_work_item_variable("DATE RANGE") #Load the input variable DATE_RANGE from this config if running locally.
-sections = wi.get_work_item_variable("SECTIONS") #Load the input variable SECTIONS from this config if running locally.
+# wi = WorkItems()
+# wi.get_input_work_item()
+#
+# search_new = wi.get_work_item_variable("SEARCH") #Load the input variable SEARCH_TEXT from this config if running locally.
+# date_range = wi.get_work_item_variable("DATE RANGE") #Load the input variable DATE_RANGE from this config if running locally.
+# sections = wi.get_work_item_variable("SECTIONS") #Load the input variable SECTIONS from this config if running locally.
 
 configs = utils.get_config_info('config/config.json') #Load the input variables SEARCH_TEXT, DATE_RANGE and SECTIONS from this config if running locally.
 
-# search_new = configs["SEARCH"] #Load the input variable SEARCH_TEXT from this config if running locally.
-# date_range = configs["DATE RANGE"] #Load the input variable DATE_RANGE from this config if running locally.
-# sections = configs["DATE RANGE"] #Load the input variable SECTIONS from this config if running locally.
+search_new = configs["SEARCH"] #Load the input variable SEARCH_TEXT from this config if running locally.
+date_range = configs["DATE_RANGE"] #Load the input variable DATE_RANGE from this config if running locally.
+sections = configs["SECTIONS"] #Load the input variable SECTIONS from this config if running locally.
 
 return_dataframe = utils.get_output_dataframe(configs['output_folder'], configs['output_file_name'])
 steps = nytimes_news_management(configs['website'], search_new, date_range, sections,return_dataframe)
@@ -54,14 +54,11 @@ try:
         steps.click_more_button()
         new_df = steps.get_news_information()
         #                               Write Excel File
+
         utils.write_excel_file(new_df, output_fullpath)
         print('Using this DF to create excel file:', new_df)
         steps.finish_process()
 except Exception as e:
-
-    if len(new_df) > 0:
-        utils.write_excel_file(new_df, output_fullpath)
-
     print(f'An error occurred while executing the process: {e}')
 
 
