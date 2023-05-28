@@ -55,8 +55,7 @@ try:
         new_df = steps.get_news_information()
 
         #                               Write Excel File
-        #print('Writing excel file')
-        #utils.write_excel_file(new_df, 'output/output_file.xlsx')
+        utils.write_excel_file(new_df, output_fullpath)
         print('Using this DF to create excel file:', new_df)
         steps.finish_process()
 except Exception as e:

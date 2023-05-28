@@ -172,7 +172,6 @@ class nytimes_news_management:
                 'NEWS PICTURE': [list_information[0][5]]
             })
             df = pd.concat([df, data], ignore_index=True)
-            utils.write_excel_file(df, 'output/output_file.xlsx')
             news_count_controller +=1
         return df
 
