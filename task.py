@@ -2,10 +2,18 @@ import ny_utils.utils
 from ny_times_steps import nytimes_news_management
 from ny_utils import utils
 
+from RPA.Robocorp.WorkItems import WorkItems
+
+wi = WorkItems()
+wi.get_input_work_item()
+search_new = wi.get_work_item_variable("SEARCH")
+date_range = wi.get_work_item_variable("DATE RANGE")
+sections = wi.get_work_item_variable("SECTIONS")
+
 configs = utils.get_config_info('config/config.json')
 
 return_dataframe = utils.get_output_dataframe(configs['output_folder'], configs['output_file_name'])
-steps = nytimes_news_management(configs['website'], configs['search'], configs['search_date_range'], configs['sections'],return_dataframe)
+steps = nytimes_news_management(configs['website'], search_new, date_range, sections,return_dataframe)
 output_fullpath = ''.join([configs['output_folder'],'/',configs['output_file_name']])
 
 print('DATAFRAME:', return_dataframe)

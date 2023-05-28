@@ -1,8 +1,5 @@
 {
   "website": "https://www.nytimes.com/",
   "output_folder": "output",
-  "output_file_name": "output_file.xlsx",
-  "search": "Silicon Valley",
-  "search_date_range": 6,
-  "sections": ["World", "Opinion"]
+  "output_file_name": "output_file.xlsx"
 }

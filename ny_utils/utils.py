@@ -63,13 +63,10 @@ def create_robot_output_folder():
 
 
 def count_search_occurrences(text, title_text, desc_text):
-    count_incidences = 0
 
     joined_texts = ' '.join([title_text.lower(), desc_text.lower()])
-    tokenized_texts = joined_texts.split()
 
-    count_incidences = [1 for token in tokenized_texts if text.lower() in token]
-    total_search_occurrences = sum(count_incidences)
+    total_search_occurrences = joined_texts.count(text)
 
     return total_search_occurrences
 
