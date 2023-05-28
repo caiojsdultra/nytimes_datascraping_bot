@@ -68,12 +68,13 @@ def count_search_occurrences(text, title_text, desc_text):
     return total_search_occurrences
 
 
-def find_dollar(text_title):
+def find_dollar(text_title, text_description):
     import re
 
+    full_text = ' '.join([text_title, text_description])
     found_dollar = False
     pattern = '\$[\d,\.]+|\d+(?:[\d,\.]*\s)?(?:dollars?|USD)'
-    occurrences = re.findall(pattern, text_title)
+    occurrences = re.findall(pattern, full_text)
 
     found_dollar = True if len(occurrences) > 0 else False
     return found_dollar
