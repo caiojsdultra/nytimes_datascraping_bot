@@ -1,6 +1,6 @@
 NOTE - The bot on Robocorp Cloud receives the following parameters through json file:
-SEARCH - Should be a String
-DATE_RANGE - Should be an int (as said on challenge's description)
+SEARCH - Should be a String,
+DATE_RANGE - Should be an int (as said on challenge's description),
 SECTIONS - Should be a list of strings (ex: (["Opinion", "Business"])
 
 ## 🟢 The Challenge
