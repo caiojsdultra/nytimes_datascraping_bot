@@ -17,7 +17,7 @@ configs = utils.get_config_info('config/config.json') #Load the input variables 
 # date_range = configs["DATE_RANGE"] #Load the input variable DATE_RANGE from this config if running locally.
 # sections = configs["SECTIONS"] #Load the input variable SECTIONS from this config if running locally.
 
-return_dataframe = utils.get_output_dataframe(configs['output_folder'], configs['output_file_name'])
+return_dataframe = utils.manage_used_repos(configs['output_folder'], configs['output_file_name'])
 steps = nytimes_news_management(configs['website'], search_new, date_range, sections,return_dataframe)
 output_fullpath = ''.join([configs['output_folder'],'/',configs['output_file_name']])
 

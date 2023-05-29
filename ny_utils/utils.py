@@ -87,9 +87,19 @@ def description_exists(desc_text, paragraphs: int):
 
     return description_exists
 
-def get_output_dataframe(path, output_file):
+def manage_used_repos(path, output_file):
     import pandas as pd
     import shutil
+    import os
+
+    if os.path.exists(path):
+        print('Deleting existing repo: ', path)
+        shutil.rmtree(path)
+        print('Creating output repo: ', path)
+        os.mkdir(path)
+    else:
+        print('Creating output repo: ', path)
+        os.mkdir(path)
 
     template_path = ''.join(['template/',output_file])
     output = ''.join([path, '/', output_file])
