@@ -3,7 +3,7 @@ SEARCH - Should be a String,
 DATE_RANGE - Should be an int (as said on challenge's description),
 SECTIONS - Should be a list of strings (ex: (["Opinion", "Business"])
 
-## 🟢 The Challenge
+## -> The Challenge
 
 Your challenge is to automate the process of extracting data from the news site. Link to the news site: [www.nytimes.com](http://www.nytimes.com/)
 
